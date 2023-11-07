@@ -1,0 +1,44 @@
+
+.title {
+    width: 100%; 
+    font-family: Oswald;
+    height: 12vh;
+    background: rgb(147,168,172);
+    background: linear-gradient(90deg, rgba(147,168,172,1) 33%, rgba(76,87,96,1) 75%);
+    font-size: 50px;
+}
+
+h3 {
+    padding-bottom: 15px;
+}
+
+/* sidebar */
+.search { 
+    width: 18vw;
+}
+
+.sidebar {
+    height: 86vh;
+}
+
+/* displays the current selected city */
+.forcast {
+    width: 82vw;
+}
+
+.selectedCity {
+    height: 30vh;
+}
+
+/* 5 day forecast */
+
+.fiveDayForecast {
+    padding-top: 30px;
+}
+
+.days {
+    height: 300px;
+    margin-bottom: 10px;
+    width: 220px;
+    box-shadow: 1px 2px 7px black;
+}

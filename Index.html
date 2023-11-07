@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Kanit&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./assets/style.css" rel="stylesheet">
+
+    <title>Weather</title>
+</head>
+
+
+
+<body>
+    <header>
+        <h1 class="d-flex align-items-center justify-content-center title">Weather Dashboard</h1>
+    </header>
+
+    <section class="d-inline-flex">
+        <section class="search">
+            <section class="container border-end border-3 sidebar">
+                <h2>Search for a City:</h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="City Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+            </section>
+        </section>
+
+        <section class="forcast">
+            <section class="d-flex CurrentDay">
+                <section class="container d-grid border border-3 align-items-center selectedCity">
+                    <h3>Selected city name goes here</h3>
+                    <p class="date">Current date</p>
+                    <p class="temperature">temperature:</p>
+                    <p class="wind">Wind:</p>
+                    <p class="humidity">humidity:</p>
+                </section>
+            </section>
+
+            <section class="fiveDayForecast">
+                <section class="container d-grid border border-3 align-items-center fiveDayForecast">
+                    <h3>5 day forecast:</h3>
+                        <section class="d-inline-flex justify-content-between">
+                            <div class="card days">
+                                <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <div class="card days">
+                                <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <div class="card days">
+                                <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <div class="card days">
+                                <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <div class="card days">
+                                <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+
+
+
+
+
+    
+</body>
+</html>
