@@ -1,44 +1,24 @@
 
+body {
+    background-color: rgb(32, 31, 31);
+}
+
+#searchButton {
+    background-color: rgb(83, 57, 231);
+    box-shadow: 2px 3px 10px rgb(76, 24, 189);
+}
+
 .title {
-    width: 100%; 
-    font-family: Oswald;
-    height: 12vh;
-    background: rgb(147,168,172);
-    background: linear-gradient(90deg, rgba(147,168,172,1) 33%, rgba(76,87,96,1) 75%);
-    font-size: 50px;
+    background-color: rgb(83, 57, 231);
+    box-shadow: 2px 3px 10px rgb(76, 24, 189);
 }
 
-h3 {
-    padding-bottom: 15px;
+.currentWeather {
+    background-color: rgb(83, 57, 231);
+    box-shadow: 2px 3px 10px rgb(76, 24, 189);
 }
 
-/* sidebar */
-.search { 
-    width: 18vw;
-}
-
-.sidebar {
-    height: 86vh;
-}
-
-/* displays the current selected city */
-.forcast {
-    width: 82vw;
-}
-
-.selectedCity {
-    height: 30vh;
-}
-
-/* 5 day forecast */
-
-.fiveDayForecast {
-    padding-top: 30px;
-}
-
-.days {
-    height: 300px;
-    margin-bottom: 10px;
-    width: 220px;
-    box-shadow: 1px 2px 7px black;
+.card {
+    background-color: rgb(83, 57, 231);
+    box-shadow: 2px 3px 10px rgb(76, 24, 189);
 }

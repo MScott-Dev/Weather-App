@@ -1,92 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Kanit&family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="./assets/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Kanit&family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="./assets/style.css" rel="stylesheet">
 
-    <title>Weather</title>
-</head>
+        <title>Weather</title>
+    </head>
 
 
 
-<body>
-    <header>
-        <h1 class="d-flex align-items-center justify-content-center title">Weather Dashboard</h1>
-    </header>
+    <body>
+        <header class="title text-center py-3">
+            <h1 class="fw-bold h3 text-white my-1">Weather Dashboard</h1>
+        </header>
 
-    <section class="d-inline-flex">
-        <section class="search">
-            <section class="container border-end border-3 sidebar">
-                <h2>Search for a City:</h2>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="City Name" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-                </div>
-            </section>
-        </section>
-
-        <section class="forcast">
-            <section class="d-flex CurrentDay">
-                <section class="container d-grid border border-3 align-items-center selectedCity">
-                    <h3>Selected city name goes here</h3>
-                    <p class="date">Current date</p>
-                    <p class="temperature">temperature:</p>
-                    <p class="wind">Wind:</p>
-                    <p class="humidity">humidity:</p>
+        <section class="container-fluid my-4 weather-data">
+            <section class="row">
+                <section class="col-xxl-3 col-md-4 px-lg-4">
+                    <h5 class="fw-bold text-white">Enter a City Name</h5>
+                    <input type="text" id="city-input" class="py-2 form-control" placeholder="Ex. Denver">
+                    <button id="searchButton" class="btn py-2 w-100 mt-3 mb-2  fw-semibold text-white">Search</button>
                 </section>
-            </section>
-
-            <section class="fiveDayForecast">
-                <section class="container d-grid border border-3 align-items-center fiveDayForecast">
-                    <h3>5 day forecast:</h3>
-                        <section class="d-inline-flex justify-content-between">
-                            <div class="card days">
-                                <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div class="card days">
-                                <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div class="card days">
-                                <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div class="card days">
-                                <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div class="card days">
-                                <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
+                <section class="col-xxl-9 col-md-8 mt-md-1 mt-4 pe-lg-4">
+                    <section class="currentWeather text-white py-2 px-4 rounded-3">
+                        <section class="mt-3 d-flex justify-content-between">
+                            <section>
+                                <h3 class="fw-bold">City Name</h3>
+                                <h6 class="my-3 mt-3">Temperature:</h6>
+                                <h6 class="my-3">Wind:</h6>
+                                <h6 class="my-3">Humidity:</h6>
+                            </section>
                         </section>
+                    </section>
+                    <h3 class="fw-bold my-4 text-white">5 Day Forecast</h3>
+                    <section class="days-forecast row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5 justify-content-between">
+                        <section class="col mb-3">
+                            <section class="card border-0 text-white py-2 px-4 rounded-3">
+                                <h5 class="card-title fw-semibold">Date</h5>
+                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
+                                <h6 class="card-text my-3">Wind:</h6>
+                                <h6 class="card-text my-3">Humidity:</h6>
+                            </section>
+                        </section>
+                        <section class="col mb-3">
+                            <section class="card border-0 text-white py-2 px-4 rounded-3">
+                                <h5 class="card-title fw-semibold">Date</h5>
+                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
+                                <h6 class="card-text my-3">Wind:</h6>
+                                <h6 class="card-text my-3">Humidity:</h6>
+                            </section>
+                        </section>
+                        <section class="col mb-3">
+                            <section class="card border-0 text-white py-2 px-4 rounded-3">
+                                <h5 class="card-title fw-semibold">Date</h5>
+                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
+                                <h6 class="card-text my-3">Wind:</h6>
+                                <h6 class="card-text my-3">Humidity:</h6>
+                            </section>
+                        </section>
+                        <section class="col mb-3">
+                            <section class="card border-0 text-white py-2 px-4 rounded-3">
+                                <h5 class="card-title fw-semibold">Date</h5>
+                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
+                                <h6 class="card-text my-3">Wind:</h6>
+                                <h6 class="card-text my-3">Humidity:</h6>
+                            </section>
+                        </section>
+                        <section class="col mb-3">
+                            <section class="card border-0 text-white py-2 px-4 rounded-3">
+                                <h5 class="card-title fw-semibold">Date</h5>
+                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
+                                <h6 class="card-text my-3">Wind:</h6>
+                                <h6 class="card-text my-3">Humidity:</h6>
+                            </section>
+                        </section>
+                    </section>
                 </section>
             </section>
         </section>
-    </section>
+     
 
 
 
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script
+        src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+        crossorigin="anonymous"></script>
+
+        <script src="./assets/weather.js" defer></script>
+        
+    </body>
 
 
-
-    
-</body>
 </html>
