@@ -23,9 +23,13 @@
         <section class="container-fluid my-4 weather-data">
             <section class="row">
                 <section class="col-xxl-3 col-md-4 px-lg-4">
-                    <h5 class="fw-bold text-white">Enter a City Name</h5>
-                    <input type="text" id="city-input" class="py-2 form-control" placeholder="Ex. Denver">
-                    <button id="searchButton" class="btn py-2 w-100 mt-3 mb-2  fw-semibold text-white">Search</button>
+                    <form>
+                        <section class="form-floating">
+                            <input type="text" class="form-control" placeholder="Enter a City name">
+                            <label for="text">Enter a City name</label>
+                        </section>
+                        <button class="btn py-2 w-100 mt-3 mb-2" id="searchButton">Search</button>
+                    </form>
                 </section>
                 <section class="col-xxl-9 col-md-8 mt-md-1 mt-4 pe-lg-4">
                     <section class="currentWeather text-white py-2 px-4 rounded-3">
