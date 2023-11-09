@@ -3,6 +3,10 @@ body {
     background-color: rgb(32, 31, 31);
 }
 
+.headerText {
+    font-size: 50px;
+}
+
 #searchButton {
     background-color: rgb(83, 57, 231);
     box-shadow: 2px 3px 10px rgb(76, 24, 189);
@@ -11,6 +15,7 @@ body {
 .title {
     background-color: rgb(83, 57, 231);
     box-shadow: 2px 3px 10px rgb(76, 24, 189);
+    height: 10vh;
 }
 
 .currentWeather {

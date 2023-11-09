@@ -16,40 +16,40 @@
 
 
     <body>
-        <header class="title text-center py-3">
-            <h1 class="fw-bold h3 text-white my-1">Weather Dashboard</h1>
+        <header class="title text-center py-3 d-flex justify-content-center align-items-center">
+            <h1 class="fw-bold h3 text-white my-1 headerText">Weather Dashboard</h1>
         </header>
 
         <section class="container-fluid my-4 weather-data">
             <section class="row">
                 <section class="col-xxl-3 col-md-4 px-lg-4">
-                    <form>
+                    <section class="cityName">
                         <section class="form-floating">
-                            <input type="text" class="form-control" placeholder="Enter a City name">
-                            <label for="text">Enter a City name</label>
+                            <input type="text" class="form-control" placeholder="Enter a City name" id="cityText">
+                            <label for="cityText">Enter a City name</label>
+                            <button type="button" class="btn py-2 w-100 mt-3 mb-2 text-white" id="searchButton">Search</button>
                         </section>
-                        <button class="btn py-2 w-100 mt-3 mb-2" id="searchButton">Search</button>
-                    </form>
+                    </section>
                 </section>
                 <section class="col-xxl-9 col-md-8 mt-md-1 mt-4 pe-lg-4">
                     <section class="currentWeather text-white py-2 px-4 rounded-3">
                         <section class="mt-3 d-flex justify-content-between">
                             <section>
-                                <h3 class="fw-bold">City Name</h3>
-                                <h6 class="my-3 mt-3">Temperature:</h6>
-                                <h6 class="my-3">Wind:</h6>
-                                <h6 class="my-3">Humidity:</h6>
+                                <h3 class="fw-bold" id="mainCard"></h3>
+                                <h6 class="my-3 mt-3" id="mainTemp"></h6>
+                                <h6 class="my-3" id="mainWind"></h6>
+                                <h6 class="my-3" id="mainHumidity"></h6>
                             </section>
                         </section>
                     </section>
                     <h3 class="fw-bold my-4 text-white">5 Day Forecast</h3>
-                    <section class="days-forecast row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5 justify-content-between">
+                    <section class="days-forecast row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5 justify-content-between" id="weatherBoxes">
                         <section class="col mb-3">
                             <section class="card border-0 text-white py-2 px-4 rounded-3">
-                                <h5 class="card-title fw-semibold">Date</h5>
-                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
-                                <h6 class="card-text my-3">Wind:</h6>
-                                <h6 class="card-text my-3">Humidity:</h6>
+                                <h5 class="card-title fw-semibold" id="miniDate">Date</h5>
+                                <h6 class="card-text my-3 mt-3 " id="miniTemp">Temp:</h6>
+                                <h6 class="card-text my-3" id="miniWind">Wind:</h6>
+                                <h6 class="card-text my-3" id="miniHumidity">Humidity:</h6>
                             </section>
                         </section>
                         <section class="col mb-3">
