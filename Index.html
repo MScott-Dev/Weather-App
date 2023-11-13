@@ -22,7 +22,7 @@
 
         <section class="container-fluid my-4 weather-data">
             <section class="row">
-                <section class="col-xxl-3 col-md-4 px-lg-4">
+                <section class="col-xxl-3 col-md-4 px-lg-4" >
                     <section class="cityName">
                         <section class="form-floating">
                             <input type="text" class="form-control" placeholder="Enter a City name" id="cityText">
@@ -30,6 +30,7 @@
                             <button type="button" class="btn py-2 w-100 mt-3 mb-2 text-white" id="searchButton">Search</button>
                         </section>
                     </section>
+                    <section class="previousSearches"></section>
                 </section>
                 <section class="col-xxl-9 col-md-8 mt-md-1 mt-4 pe-lg-4">
                     <section class="currentWeather text-white py-2 px-4 rounded-3">
@@ -46,42 +47,42 @@
                     <section class="days-forecast row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5 justify-content-between" id="weatherBoxes">
                         <section class="col mb-3">
                             <section class="card border-0 text-white py-2 px-4 rounded-3">
-                                <h5 class="card-title fw-semibold" id="miniDate">Date</h5>
-                                <h6 class="card-text my-3 mt-3 " id="miniTemp">Temp:</h6>
-                                <h6 class="card-text my-3" id="miniWind">Wind:</h6>
-                                <h6 class="card-text my-3" id="miniHumidity">Humidity:</h6>
+                                <h5 class="card-title fw-semibold" id="miniDate"></h5>
+                                <h6 class="card-text my-3 mt-3 " id="miniTemp"></h6>
+                                <h6 class="card-text my-3" id="miniWind"></h6>
+                                <h6 class="card-text my-3" id="miniHumidity"></h6>
                             </section>
                         </section>
                         <section class="col mb-3">
                             <section class="card border-0 text-white py-2 px-4 rounded-3">
-                                <h5 class="card-title fw-semibold">Date</h5>
-                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
-                                <h6 class="card-text my-3">Wind:</h6>
-                                <h6 class="card-text my-3">Humidity:</h6>
+                                <h5 class="card-title fw-semibold" id="miniDate2"></h5>
+                                <h6 class="card-text my-3 mt-3 " id="miniTemp2"></h6>
+                                <h6 class="card-text my-3" id="miniWind2"></h6>
+                                <h6 class="card-text my-3" id="miniHumidity2"></h6>
                             </section>
                         </section>
                         <section class="col mb-3">
                             <section class="card border-0 text-white py-2 px-4 rounded-3">
-                                <h5 class="card-title fw-semibold">Date</h5>
-                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
-                                <h6 class="card-text my-3">Wind:</h6>
-                                <h6 class="card-text my-3">Humidity:</h6>
+                                <h5 class="card-title fw-semibold" id="miniDate3"></h5>
+                                <h6 class="card-text my-3 mt-3 " id="miniTemp3"></h6>
+                                <h6 class="card-text my-3" id="miniWind3"></h6>
+                                <h6 class="card-text my-3" id="miniHumidity3"></h6>
                             </section>
                         </section>
                         <section class="col mb-3">
                             <section class="card border-0 text-white py-2 px-4 rounded-3">
-                                <h5 class="card-title fw-semibold">Date</h5>
-                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
-                                <h6 class="card-text my-3">Wind:</h6>
-                                <h6 class="card-text my-3">Humidity:</h6>
+                                <h5 class="card-title fw-semibold" id="miniDate4"></h5>
+                                <h6 class="card-text my-3 mt-3 " id="miniTemp4"></h6>
+                                <h6 class="card-text my-3" id="miniWind4"></h6>
+                                <h6 class="card-text my-3" id="miniHumidity4"></h6>
                             </section>
                         </section>
                         <section class="col mb-3">
                             <section class="card border-0 text-white py-2 px-4 rounded-3">
-                                <h5 class="card-title fw-semibold">Date</h5>
-                                <h6 class="card-text my-3 mt-3 ">Temp:</h6>
-                                <h6 class="card-text my-3">Wind:</h6>
-                                <h6 class="card-text my-3">Humidity:</h6>
+                                <h5 class="card-title fw-semibold" id="miniDate5"></h5>
+                                <h6 class="card-text my-3 mt-3 " id="miniTemp5"></h6>
+                                <h6 class="card-text my-3" id="miniWind5"></h6>
+                                <h6 class="card-text my-3" id="miniHumidity5"></h6>
                             </section>
                         </section>
                     </section>
@@ -98,7 +99,7 @@
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
         crossorigin="anonymous"></script>
 
-        <script src="./assets/weather.js" defer></script>
+        <script src="./assets/weather.js"></script>
         
     </body>
 

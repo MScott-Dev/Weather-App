@@ -27,3 +27,8 @@ body {
     background-color: rgb(83, 57, 231);
     box-shadow: 2px 3px 10px rgb(76, 24, 189);
 }
+
+.previous{
+    background-color: rgb(87, 80, 128);
+    box-shadow: 2px 3px 10px rgb(135, 94, 223);
+}
