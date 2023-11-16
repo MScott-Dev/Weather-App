@@ -34,6 +34,9 @@ var miniCardHumidity5 = document.querySelector('#miniHumidity5');
 
 const apiKey = "5b7bc14c362fbf1c5f08fc9f84c944ae";
 
+const previousCities = JSON.parse(localStorage.getItem('previousCities')) || [];
+
+
 
 
     function cityCoords() {
@@ -48,6 +51,7 @@ const apiKey = "5b7bc14c362fbf1c5f08fc9f84c944ae";
 
         mainCardEl.textContent = cityName;
 
+        
         const apiURL =  'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + apiKey + '&units=imperial';
 
 
@@ -71,7 +75,7 @@ const apiKey = "5b7bc14c362fbf1c5f08fc9f84c944ae";
 
                             miniCardDate.textContent = miniDate;
                             miniCardTemp.textContent = "Temp - " + Math.ceil(miniTemp) + '°F';
-                            miniCardWind.textContent = "Wind - " + Math.ceil(miniWind) + "mph"
+                            miniCardWind.textContent = "Wind - " + Math.ceil(miniWind) + " mph"
                             miniCardHumidity.textContent = "Humidity - " + Math.ceil(minihumidity) + "%";
 
                             // second card
@@ -84,7 +88,7 @@ const apiKey = "5b7bc14c362fbf1c5f08fc9f84c944ae";
 
                             miniCardDate2.textContent = miniDate2;
                             miniCardTemp2.textContent = "Temp - " + Math.ceil(miniTemp2) + '°F';
-                            miniCardWind2.textContent = "Wind - " + Math.ceil(miniWind2) + "mph"
+                            miniCardWind2.textContent = "Wind - " + Math.ceil(miniWind2) + " mph"
                             miniCardHumidity2.textContent = "Humidity - " + Math.ceil(minihumidity2) + "%";
                              
 
@@ -98,7 +102,7 @@ const apiKey = "5b7bc14c362fbf1c5f08fc9f84c944ae";
 
                             miniCardDate3.textContent = miniDate3;
                             miniCardTemp3.textContent = "Temp - " + Math.ceil(miniTemp3) + '°F';
-                            miniCardWind3.textContent = "Wind - " + Math.ceil(miniWind3) + "mph"
+                            miniCardWind3.textContent = "Wind - " + Math.ceil(miniWind3) + " mph"
                             miniCardHumidity3.textContent = "Humidity - " + Math.ceil(minihumidity3) + "%";
                             
                             // fourth card
@@ -111,7 +115,7 @@ const apiKey = "5b7bc14c362fbf1c5f08fc9f84c944ae";
 
                             miniCardDate4.textContent = miniDate4;
                             miniCardTemp4.textContent = "Temp - " + Math.ceil(miniTemp4) + '°F';
-                            miniCardWind4.textContent = "Wind - " + Math.ceil(miniWind4) + "mph"
+                            miniCardWind4.textContent = "Wind - " + Math.ceil(miniWind4) + " mph"
                             miniCardHumidity4.textContent = "Humidity - " + Math.ceil(minihumidity4) + "%";
                             
                             // Fifth card
@@ -124,7 +128,7 @@ const apiKey = "5b7bc14c362fbf1c5f08fc9f84c944ae";
 
                             miniCardDate5.textContent = miniDate5;
                             miniCardTemp5.textContent = "Temp - " + Math.ceil(miniTemp5) + '°F';
-                            miniCardWind5.textContent = "Wind - " + Math.ceil(miniWind5) + "mph"
+                            miniCardWind5.textContent = "Wind - " + Math.ceil(miniWind5) + " mph"
                             miniCardHumidity5.textContent = "Humidity - " + Math.ceil(minihumidity5) + "%";
                               
 
@@ -190,7 +194,19 @@ const apiKey = "5b7bc14c362fbf1c5f08fc9f84c944ae";
 searchButtonEl.addEventListener("click", function() {
     cityCoords();
     
+    saveCities = (e) =>{
+        e.preventDefault();
     
+        const savedCities = {
+            city: locationSearch.value.trim()
+        };
+    
+        previousCities.push(savedCities);
+        previousCities.splice(5);
+    
+        localStorage.setItem('previousCities', JSON.stringify(previousCities));
+    
+    };
     
 
 });
