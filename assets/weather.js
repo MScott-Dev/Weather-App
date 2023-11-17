@@ -39,17 +39,11 @@ const previousCities = JSON.parse(localStorage.getItem('previousCities')) || [];
 
 
 
-    function cityCoords() {
+    function cityCoords(cityName) {
 
-        const cityName = locationSearch.value.trim();
+        
 
-        // creates old searches 
-        var newButton= document.createElement('button');
-        newButton.className = "btn py-2 w-100 mt-3 mb-2 text-white previous"
-        newButton.textContent = cityName;
-        previousSearchesEl.appendChild(newButton);
-
-        mainCardEl.textContent = cityName;
+        
 
         
         const apiURL =  'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + apiKey + '&units=imperial';
@@ -64,7 +58,7 @@ const previousCities = JSON.parse(localStorage.getItem('previousCities')) || [];
                         response.json().then(function (data) {
                             console.log(data);
 
-                            
+            
                             // first card
                             var miniDateAndTime = data.list[0].dt_txt;
                             const miniDate = miniDateAndTime.slice(0,  11);
@@ -167,7 +161,7 @@ const previousCities = JSON.parse(localStorage.getItem('previousCities')) || [];
                         const name = data.name
 
                         fiveDayForecast(lat, lon);
-
+                        mainCardEl.textContent = name
                         mainCardTemp.textContent = 'Temperature: ' + Math.ceil(temp) + '°F';
                         mainCardWind.textContent = 'Wind: ' + Math.ceil(wind) + ' mph';
                         mainCardHumidity.textContent = 'Humidity: ' + Math.ceil(humidity) + '%';
@@ -187,28 +181,52 @@ const previousCities = JSON.parse(localStorage.getItem('previousCities')) || [];
     }
 
 
+   const saveCities = () =>{
+        const cityValue = locationSearch.value.trim()
+        const previousCities = JSON.parse(localStorage.getItem('previousCities')) || [];
     
-
-
-
-searchButtonEl.addEventListener("click", function() {
-    cityCoords();
+        
     
-    saveCities = (e) =>{
-        e.preventDefault();
-    
-        const savedCities = {
-            city: locationSearch.value.trim()
-        };
-    
-        previousCities.push(savedCities);
-        previousCities.splice(5);
+        previousCities.push(cityValue);
+        
     
         localStorage.setItem('previousCities', JSON.stringify(previousCities));
-    
+        displayCities(previousCities.reverse());
     };
+    
+    const displayCities = (previousCities) => {
+        console.log("Working");
+        previousSearchesEl.textContent = ''
+        console.log(previousCities.length);
+        for(var i = 0; i < previousCities.length; i++) {
+            console.log(previousCities[i]);
+            const pastCities = document.createElement('button');
+            pastCities.textContent = previousCities[i];
+            pastCities.className = "btn py-2 w-100 mt-3 mb-2 text-white previous"
+            previousSearchesEl.appendChild(pastCities);
+            previousCities.splice(5);
+            pastCities.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                let pastCityClicked = pastCities.textContent
+                cityCoords(pastCityClicked);
+            })
+        }
+           
+         
+
+    }
+
+
+searchButtonEl.addEventListener("click", function(event) {
+        event.preventDefault();
+        const cityName = locationSearch.value.trim();
+    cityCoords(cityName);
+    
+    saveCities();
     
 
 });
    
+
 
