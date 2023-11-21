@@ -17,7 +17,7 @@ Check out your local weather and see how the weather is for the week!
 
 1. A web browser
 2. Internet
-3. <a href="https://mscott-dev.github.io/JavaScript-Quiz/" alt="javaScript">A link to the webpage</a>
+3. <a href="https://mscott-dev.github.io/Weather-App/" alt="WeatherApp">A link to the webpage</a>
 
 ## Installing
 N/A
